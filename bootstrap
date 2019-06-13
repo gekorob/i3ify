@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+
+BASEPATH="$HOME/.i3ify"
+
+if [ -e $BASEPATH/.git ]; then
+  cd $BASEPATH && git pull
+else
+  git clone https://github.com/gekorob/i3ify.git $BASEPATH
+fi
+
+source $BASEPATH/install
+
+
+# i3 config
+mkdir -p $HOME/.config/i3
+ln -sf $BASEPATH/i3-config $HOME/.config/i3/config
+
+# i3 share pictures
+mkdir -p $HOME/.local/share/pictures/i3
+ln -sf $BASEPATH/share/pictures $HOME/.local/share/pictures
+
+# i3 share fonts
+FONTS_DIR=$HOME/.local/share/fonts
+mkdir -p $FONTS_DIR
+cd $FONTS_DIR && curl -fLo "fa-brands-400.ttf" https://github.com/FortAwesome/Font-Awesome/raw/master/webfonts/fa-brands-400.ttf
+cd $FONTS_DIR && curl -fLo "fa-regular-400.ttf" https://github.com/FortAwesome/Font-Awesome/raw/master/webfonts/fa-regular-400.ttf
+cd $FONTS_DIR && curl -fLo "fa-solid-900.ttf" https://github.com/FortAwesome/Font-Awesome/raw/master/webfonts/fa-solid-900.ttf
+
+
+# i3cmds
+mkdir -p $HOME/.local/bin
+ln -sf $BASEPATH/bin/i3cmds $HOME/.local/bin/i3cmds
+

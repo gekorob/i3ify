@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+sudo dnf install -y rofi
+
+mkdir -p $HOME/.config/rofi
+ln -sf $BASEPATH/rofi-config.rasi $HOME/.config/rofi/config
+ln -sf $BASEPATH/share/themes/rofi/arthur.rasi $HOME/.config/rofi/arthur.rasi
