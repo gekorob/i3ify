@@ -186,28 +186,29 @@ client.focused_inactive $inactive-bg-color 	$inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    	$urgent-bg-color   $text-color          #00ff00
 
 # bar
-# bar {
-#   	status_command i3blocks # -c $HOME/.config/i3blocks/config
-# 	colors {
-# 		background $bg-color
-# 	    	separator #757575
-# 		#                  border             background         text
-# 		focused_workspace  $bg-color          $bg-color          $text-color
-# 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-# 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-# 	}
-# }
-
 bar {
-  font pango:mono 10
-  status_command i3blocks
-  position top
+  status_command i3blocks # -c $HOME/.config/i3blocks/config
+  colors {
+  background $bg-color
+    separator #757575
+    #                  border             background         text
+    focused_workspace  $bg-color          $bg-color          $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
   mode dock
-  modifier None
 }
 
+# bar {
+#   font pango:mono 10
+#   status_command i3blocks
+#   position top
+#   mode dock
+#   modifier None
+# }
 
-bindsym $mod+d exec rofi -show drun 
+
+bindsym $mod+d exec rofi -show drun
 
 #bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+x exec $HOME/.local/bin/i3cmds/lock.sh
