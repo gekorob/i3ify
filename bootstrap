@@ -16,7 +16,7 @@ mkdir -p $HOME/.config/i3
 ln -sf $BASEPATH/i3-config $HOME/.config/i3/config
 
 # i3 share pictures
-mkdir -p $HOME/.local/share/pictures/i3
+mkdir -p $HOME/.local/share/
 ln -sf $BASEPATH/share/pictures $HOME/.local/share/pictures
 
 # i3 share fonts
