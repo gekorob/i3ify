@@ -202,7 +202,7 @@ bar {
   font pango:mono 10
   status_command i3blocks
   position top
-  mode doc
+  mode dock
   modifier None
 }
 
