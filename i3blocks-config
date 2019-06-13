@@ -50,7 +50,8 @@ signal=10
 ##command=disk /home 🏠
 #
 [battery]
-command=battery BAT0
+command=~/.local/bin/statusbar/battery BAT0
+label= BAT
 interval=5
 
 [clock]

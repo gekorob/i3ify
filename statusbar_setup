@@ -3,6 +3,8 @@
 sudo dnf copr enable atim/i3blocks -y
 sudo dnf install -y i3blocks
 
+pip3 install pulsemixer --user
+
 mkdir -p $HOME/.config/i3blocks
 ln -sf $BASEPATH/i3blocks-config $HOME/.config/i3blocks/config
 

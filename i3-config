@@ -224,4 +224,4 @@ exec compton
 # exec --no-startup-id nm-applet &
  
 #volume control applet in systray
-exec --no-startup-id pasystray &
+# exec --no-startup-id pasystray &

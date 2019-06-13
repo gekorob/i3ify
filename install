@@ -5,7 +5,7 @@ sudo dnf install -y i3lock scrot ImageMagic
 sudo dnf install -y compton nitrogen udiskie pasystray network-manager-applet pavucontrol
 
 # replacement for dmenu
-source $BASEPATH/rofi
+source $BASEPATH/rofi_setup
 
 # i3blocks
-source $BASEPATH/statusbar
+source $BASEPATH/statusbar_setup
