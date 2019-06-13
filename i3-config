@@ -215,6 +215,7 @@ bindsym $mod+Shift+x exec $HOME/.local/bin/i3cmds/lock.sh
 
 exec_always feh --bg-scale $HOME/.local/share/pictures/wallpaper.jpg
 exec compton
+exec --no-startup-id dunst
 
 # exec --no-startup-id nitrogen --restore &
  
