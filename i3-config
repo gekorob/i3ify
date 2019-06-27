@@ -207,6 +207,14 @@ bar {
 #   modifier None
 # }
 
+#bind multimedia keys
+bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +5 && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -5 && pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioMute exec pulsemixer --toggle-mute && pkill -SIGRTMIN+10 i3blocks
+# Screen brightness controls with notification
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness with notification
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness with notification
+
 
 bindsym $mod+d exec rofi -show drun
 
