@@ -228,10 +228,7 @@ exec --no-startup-id dunst
 # exec --no-startup-id nitrogen --restore &
  
 #automount cd/dvd, usb disks and show notifications
-# exec --no-startup-id udiskie -ant &
- 
-#network manager applet
-# exec --no-startup-id nm-applet &
- 
-#volume control applet in systray
-# exec --no-startup-id pasystray &
+exec --no-startup-id udiskie -ant &
+
+# set the compose key
+exec_always --no-startup-id $HOME/.local/bin/i3cmds/keymap.sh
