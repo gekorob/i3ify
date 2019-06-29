@@ -18,6 +18,8 @@ ln -sf $BASEPATH/i3-config $HOME/.config/i3/config
 # i3 share pictures
 mkdir -p $HOME/.local/share/
 ln -sf $BASEPATH/share/pictures $HOME/.local/share/pictures
+mkdir -p $HOME/Pictures/wallpapers
+cp -sf $BASEPATH/share/pictures/*.jpg $HOME/Pictures/wallpapers/
 
 # i3 share fonts
 FONTS_DIR=$HOME/.local/share/fonts

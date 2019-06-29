@@ -221,8 +221,11 @@ bindsym $mod+d exec rofi -show drun
 #bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+x exec $HOME/.local/bin/i3cmds/lock.sh
 
-exec_always feh --bg-scale $HOME/.local/share/pictures/wallpaper.jpg
-exec compton
+# wallpaper
+exec --no-startup-id feh --randomize --bg-scale $HOME/Pictures/wallpapers/*.jpg
+bindsym $mod+Shift+w exec --no-startup-id feh --randomize --bg-scale $HOME/Pictures/wallpapers/*.jpg
+
+exec --no-startup-id compton
 exec --no-startup-id dunst
 
 # exec --no-startup-id nitrogen --restore &
