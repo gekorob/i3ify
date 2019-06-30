@@ -84,10 +84,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+t floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+t focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -216,7 +216,7 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness with no
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness with notification
 
 
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+space exec rofi -show drun
 
 #bindsym $mod+Shift+x exec i3lock
 bindsym $mod+Shift+x exec $HOME/.local/bin/i3cmds/lock.sh
@@ -229,7 +229,7 @@ exec --no-startup-id compton
 exec --no-startup-id dunst
 
 # autolock
-exec xautolock -detectsleep -time 10 -locker "$HOME/.local/bin/i3cmds/lock.sh" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+exec xautolock -detectsleep -corners -00- -time 10 -locker "$HOME/.local/bin/i3cmds/lock.sh" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
 
 # exec --no-startup-id nitrogen --restore &
  
@@ -238,3 +238,6 @@ exec --no-startup-id udiskie -ant &
 
 # set the compose key
 exec_always --no-startup-id $HOME/.local/bin/i3cmds/keymap.sh
+
+# try to set displays for home dock
+exec --no-startup-id $HOME/.local/bin/i3cmds/displays_for_home_dock.sh
