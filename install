@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 sudo dnf install -y i3 i3status dmenu i3lock xbacklight light feh conky
-sudo dnf install -y i3lock scrot ImageMagick
+sudo dnf install -y xautolock scrot ImageMagick
 sudo dnf install -y compton nitrogen udiskie pasystray network-manager-applet pavucontrol
 
 # replacement for dmenu
