@@ -135,6 +135,16 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Code"] $ws2
 assign [class="Google-chrome"] $ws3
 assign [class="Firefox"] $ws3
+assign [class="Journey"] $ws9
+
+for_window [class="TelegramDesktop"] floating enable
+assign [class="TelegramDesktop"] $ws8
+
+for_window [class="Gitter"] floating enable
+assign [class="Gitter"] $ws8
+
+for_window [class="Pidgin"] floating enable
+assign [class="Pidgin"] $ws8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -233,8 +243,11 @@ exec xautolock -detectsleep -corners -00- -time 10 -locker "$HOME/.local/bin/i3c
 
 # exec --no-startup-id nitrogen --restore &
  
-#automount cd/dvd, usb disks and show notifications
+# restoreautomount cd/dvd, usb disks and show notifications
 exec --no-startup-id udiskie -ant &
+
+# network-manager applet
+exec --no-startup-id nm-applet
 
 # set the compose key
 exec_always --no-startup-id $HOME/.local/bin/i3cmds/keymap.sh
