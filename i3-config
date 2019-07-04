@@ -138,13 +138,8 @@ assign [class="Google-chrome"] $ws3
 assign [class="Firefox"] $ws3
 assign [class="Journey"] $ws9
 
-for_window [class="TelegramDesktop"] floating enable
 assign [class="TelegramDesktop"] $ws8
-
-for_window [class="Gitter"] floating enable
-assign [class="Gitter"] $ws8
-
-for_window [class="Pidgin"] floating enable
+assign [class="Gitter"] $ws7
 assign [class="Pidgin"] $ws8
 
 # reload the configuration file
