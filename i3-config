@@ -138,6 +138,7 @@ assign [class="Google-chrome"] $ws3
 assign [class="Firefox"] $ws3
 assign [class="Journey"] $ws9
 
+assign [class="Bluejeans"] $ws6
 assign [class="TelegramDesktop"] $ws8
 assign [class="Gitter"] $ws7
 assign [class="Pidgin"] $ws8
@@ -229,6 +230,10 @@ bindsym $mod+$alt+Down move workspace to output down
 bindsym $mod+$alt+Up move workspace to output up
 bindsym $mod+$alt+Left move workspace to output left
 bindsym $mod+$alt+Right move workspace to output right
+
+# Printscreen
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Downloads/'
+bindsym Control+Print exec gnome-screenshot -i
 
 
 #bindsym $mod+Shift+x exec i3lock
