@@ -246,7 +246,8 @@ exec --no-startup-id compton
 exec --no-startup-id dunst
 
 # autolock
-exec xautolock -detectsleep -corners -00- -time 10 -locker "$HOME/.local/bin/i3cmds/lock.sh" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+# exec xautolock -detectsleep -corners -00- -time 10 -locker "$HOME/.local/bin/i3cmds/lock.sh" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+exec xautolock -detectsleep -corners -00- -time 10 -locker "/usr/bin/i3lock -ef -c acacac -t -i /home/rciatti/Pictures/lock.png" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
 
 # exec --no-startup-id nitrogen --restore &
  
