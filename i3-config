@@ -237,7 +237,8 @@ bindsym Control+Print exec gnome-screenshot -i
 
 
 #bindsym $mod+Shift+x exec i3lock
-bindsym $mod+Shift+x exec $HOME/.local/bin/i3cmds/lock.sh
+# bindsym $mod+Shift+x exec $HOME/.local/bin/i3cmds/lock.sh
+bindsym $mod+Shift+x exec /usr/bin/i3lock -ef -c acacac -t -i /home/rciatti/Pictures/lock.png
 
 # wallpaper
 bindsym $mod+Shift+w exec --no-startup-id feh --randomize --bg-scale $HOME/Pictures/wallpapers/*.jpg
