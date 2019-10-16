@@ -232,8 +232,8 @@ bindsym $mod+$alt+Left move workspace to output left
 bindsym $mod+$alt+Right move workspace to output right
 
 # Printscreen
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Downloads/'
-bindsym Control+Print exec gnome-screenshot -i
+bindsym $mod+Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Downloads/'
+bindsym $mod+Control+Print exec gnome-screenshot -i
 
 
 #bindsym $mod+Shift+x exec i3lock
