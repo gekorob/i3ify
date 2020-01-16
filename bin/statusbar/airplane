@@ -1,0 +1,12 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	3) pgrep -x dunst >/dev/null && notify-send " Airplane Mode On" "\- shows  with all radios off, nothing otherwise.
+- Middle click to toggle airplane mode on/off."
+esac
+
+if [ $(radio_devices_powered_on.sh) -eq 0 ]; 
+	# then printf "\\n"; 
+  then printf "<span color='%s' size='x-large'>%s%s%s</span>\\n" "#FF0000" ""
+	else printf "\\n"; 
+fi
