@@ -142,6 +142,7 @@ assign [class="Pidgin"] $ws7
 assign [class="TelegramDesktop"] $ws8
 assign [class="Gitter"] $ws8
 assign [class="Journey"] $ws9
+assign [class="Slack"] $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
