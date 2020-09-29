@@ -20,6 +20,7 @@ mkdir -p $HOME/.local/share/
 ln -sf $BASEPATH/share/pictures $HOME/.local/share/pictures
 mkdir -p $HOME/Pictures/wallpapers
 cp -sf $BASEPATH/share/pictures/*.jpg $HOME/Pictures/wallpapers/
+cp -sf $BASEPATH/share/pictures/*.png $HOME/Pictures/
 
 # i3 share fonts
 FONTS_DIR=$HOME/.local/share/fonts
