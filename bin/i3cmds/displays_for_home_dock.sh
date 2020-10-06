@@ -5,4 +5,6 @@ usb-devices | grep "$product"
 
 if [[ $? -eq 0 ]]; then 
   source $HOME/.screenlayout/home_docking.sh
+else
+  source $HOME/.screenlayout/midres_alone.sh
 fi
