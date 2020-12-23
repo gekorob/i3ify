@@ -251,6 +251,10 @@ exec xautolock -detectsleep -corners -00- -time 10 -locker "/usr/bin/i3lock -ef 
 # restoreautomount cd/dvd, usb disks and show notifications
 exec --no-startup-id udiskie -ant &
 
+# Bluetooth Manager
+# for_window [class="Blueman-manager"] floating enable
+# exec --no-startup-id /usr/bin/blueman-applet
+
 # network-manager applet
 exec --no-startup-id nm-applet
 
@@ -258,5 +262,5 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.local/bin/i3cmds/keymap.sh
 
 # try to set displays for home dock
-exec --no-startup-id $HOME/.local/bin/i3cmds/displays_for_home_dock.sh
+exec --no-startup-id $HOME/.local/bin/i3cmds/display-conf-chooser.sh
 exec --no-startup-id feh --randomize --bg-scale $HOME/Pictures/wallpapers/*.jpg
