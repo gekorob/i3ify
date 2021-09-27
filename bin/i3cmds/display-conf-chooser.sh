@@ -7,7 +7,7 @@ connected_monitors=$(xrandr -q | grep -c '\sconnected\s')
 case $connected_monitors in 
   3)
     echo "3 monitors"
-    source $HOME/.screenlayout/home_docking.sh
+    source $HOME/.screenlayout/home_docking_2.sh
     ;;
   2)
     source $HOME/.screenlayout/top_down.sh
