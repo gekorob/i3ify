@@ -125,7 +125,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [class="code"] $ws2
+assign [class="com.microsoft.VSCode"] $ws2
+assign [class="kiro"] $ws2
 assign [class="jetbrains-rubymine"] $ws3
 assign [class="Google-chrome"] $ws4
 assign [class="Firefox"] $ws4
@@ -264,3 +265,13 @@ exec_always --no-startup-id $HOME/.local/bin/i3cmds/keymap.sh
 # try to set displays for home dock
 exec --no-startup-id $HOME/.local/bin/i3cmds/display-conf-chooser.sh
 exec --no-startup-id feh --randomize --bg-scale $HOME/Pictures/wallpapers/*.jpg
+
+# --- Scratchpad "quick instant shell" -------------------------------------
+# A persistent terminator window matched by its WM_WINDOW_ROLE. It lives in
+# the scratchpad (hidden) and is toggled in/out with $mod+grave (backtick).
+# It hides instead of closing, so the shell session and history survive.
+# NOTE: -u (--no-dbus) is required so this does NOT merge into the shared
+# terminator server; otherwise the window never keeps its role.
+for_window [window_role="scratchterm"] move scratchpad, floating enable, resize set 1000 450, sticky enable
+exec --no-startup-id terminator -u -r scratchterm
+bindsym $mod+grave [window_role="scratchterm"] scratchpad show, move position center
