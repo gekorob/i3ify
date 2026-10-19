@@ -267,11 +267,13 @@ exec --no-startup-id $HOME/.local/bin/i3cmds/display-conf-chooser.sh
 exec --no-startup-id feh --randomize --bg-scale $HOME/Pictures/wallpapers/*.jpg
 
 # --- Scratchpad "quick instant shell" -------------------------------------
-# A persistent terminator window matched by its WM_WINDOW_ROLE. It lives in
+# A persistent urxvt window matched by its WM_CLASS instance name. It lives in
 # the scratchpad (hidden) and is toggled in/out with $mod+grave (backtick).
 # It hides instead of closing, so the shell session and history survive.
-# NOTE: -u (--no-dbus) is required so this does NOT merge into the shared
-# terminator server; otherwise the window never keeps its role.
-for_window [window_role="scratchterm"] move scratchpad, floating enable, resize set 1000 450, sticky enable
-exec --no-startup-id terminator -u -r scratchterm
-bindsym $mod+grave [window_role="scratchterm"] scratchpad show, move position center
+# NOTE: urxvt is used instead of terminator because terminator 2.x merges new
+# launches into its single running instance and drops the custom -r role,
+# leaving no window for the keybind to match. urxvt always runs standalone and
+# reliably sets WM_CLASS instance via -name.
+for_window [instance="scratchterm"] move scratchpad, floating enable, resize set 1000 450, sticky enable
+exec --no-startup-id urxvt -name scratchterm
+bindsym $mod+grave [instance="scratchterm"] scratchpad show, move position center
